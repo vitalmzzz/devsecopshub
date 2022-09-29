@@ -1,0 +1,11 @@
+DROP TABLE gitlab_projects;
+DROP TABLE appsec_users;
+DROP TABLE user_projects;
+DROP TABLE appsechub_defects
+DROP TABLE appsechub_projects
+DROP TABLE appsechub_artifacts
+DROP TABLE appsechub_codebase
+DROP TABLE appfarm_services
+DROP TABLE jira_report_v2
+DROP TABLE jira_report_v3
+DROP TABLE jira_work_time

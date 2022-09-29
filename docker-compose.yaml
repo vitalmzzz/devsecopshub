@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  devsecopshub:
+    build: ./
+    command: ./app
+    env_file:
+      - .env
+    ports: 
+      - 8080:8080
+    depends_on:
+      -  postgresql
+
+  postgresql:
+    image: docker.io/bitnami/postgresql:11
+    ports:
+      - '5432:5432'
+    volumes:
+      - 'postgresql_data:/data/postgresql'
+    environment:
+      - POSTGRESQL_USERNAME=app
+      - POSTGRESQL_PASSWORD=qwer1234
+      - POSTGRESQL_DATABASE=test
+
+volumes:
+  postgresql_data:
+    driver: local
